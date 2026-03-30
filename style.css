@@ -1,0 +1,193 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f8fafc;
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.control-panel {
+  flex: 1;
+}
+
+.seating-panel {
+  flex: 2;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.primary-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.secondary-btn {
+  background: #10b981;
+  color: white;
+}
+
+.outline-btn {
+  background: transparent;
+  border: 1px solid #ccc;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.seating-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.seat {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.math {
+  background: #dbeafe;
+}
+
+.physics {
+  background: #dcfce7;
+}
+
+.chemistry {
+  background: #f3e8ff;
+}
+
+.empty {
+  background: #e5e7eb;
+}
+
+.status-message {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* ===== Animations ===== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Page load */
+.container {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Student list animation */
+li {
+  animation: slideUp 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Seat animation */
+.seat {
+  animation: pop 0.4s ease;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.seat:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Status message animation */
+.status-message {
+  animation: fadeIn 0.3s ease;
+}
