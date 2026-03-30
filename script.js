@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ✅ SINGLE render function with animation
     function render(seats, cols) {
         grid.innerHTML = '';
-        grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+        grid.style.gridTemplateColumns = `repeat(${cols}, minmax(60px, 1fr))`;
 
         seats.forEach((s, index) => {
             let div = document.createElement('div');
